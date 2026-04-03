@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecotech - Inovação Sustentável</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo">
+                <img src="assets/logo-header.png" alt="Ecotech Inovação Sustentável" class="header__logo-img">
+            </a>
+
+            <nav class="header__nav" id="mainNav">
+                <ul class="header__nav-list">
+                    <li><a href="#quem-somos" class="header__nav-link">Quem Somos</a></li>
+                    <li><a href="#produtos" class="header__nav-link">Produtos</a></li>
+                    <li><a href="#servicos" class="header__nav-link">Serviços</a></li>
+                    <li><a href="#contato" class="header__nav-link">Fale Conosco</a></li>
+                </ul>
+            </nav>
+
+            <button class="header__menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <div class="header__search">
+            <form class="header__search-form" id="searchForm" role="search">
+                <input type="search" class="header__search-input" placeholder="Busque sobre nossas inovações..."
+                    id="searchInput" aria-label="Buscar">
+                <button type="submit" class="header__search-btn" aria-label="Buscar">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero">
+        <div class="hero__content">
+            <div class="hero__badge">
+                <img src="assets/logo.png" alt="Ecotech Inovação Sustentável" class="hero__badge-logo">
+            </div>
+            <h1 class="hero__title"><em>Save<br>Our Planet</em></h1>
+            <p class="hero__description">
+                Transformamos o futuro com soluções inteligentes em eficiência energética e sustentabilidade para
+                residências, empresas e instituições.
+            </p>
+            <a href="#" class="hero__cta">Conheça nossas soluções</a>
+            <a href="#" class="hero__link">www.ecotech.com/register</a>
+        </div>
+        <div class="hero__image">
+            <img src="assets/banner-1.jpg" alt="Mão segurando planta com terra">
+        </div>
+        <div class="hero__wave">
+            <svg viewBox="0 0 1440 180" preserveAspectRatio="none">
+                <path d="M0,100 C360,180 720,0 1440,100 L1440,180 L0,180Z" fill="#ffffff" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ========== VALORES ========== -->
+    <section class="valores">
+        <div class="valores__container">
+            <div class="valores__card">
+                <span class="valores__card-text">Sustentabilidade ambiental</span>
+            </div>
+            <div class="valores__card">
+                <span class="valores__card-text">Inovação Tecnológica</span>
+            </div>
+            <div class="valores__card">
+                <span class="valores__card-text">Qualidade dos Produtos</span>
+            </div>
+            <div class="valores__card">
+                <span class="valores__card-text">Transparência com Cliente</span>
+            </div>
+            <div class="valores__card">
+                <span class="valores__card-text">Responsabilidade Social</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== INOVAÇÃO BANNER ========== -->
+    <section class="inovacao" id="inovacao">
+        <div class="inovacao__overlay"></div>
+        <div class="inovacao__content">
+            <p class="inovacao__text">
+                <span class="anim-text" data-delay="0">É possível pensar em</span><br>
+                <span class="inovacao__text--destaque anim-text" data-delay="150">inovação</span><br>
+                <span class="inovacao__text--italic anim-text" data-delay="300">prezando por</span><br>
+                <strong class="inovacao__text--bold anim-text" data-delay="450">sustentabilidade</strong>
+            </p>
+        </div>
+        <div class="inovacao__illustration">
+            <img src="assets/banner-2.png"
+                alt="Ilustração de inovação sustentável com fábricas, energia limpa e reciclagem">
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <img src="assets/logo-footer.png" alt="Ecotech Inovação Sustentável" class="footer__logo">
+            </div>
+
+            <nav class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li><a href="#quem-somos" class="footer__nav-link">Quem Somos</a></li>
+                    <li><a href="#produtos" class="footer__nav-link">Produtos</a></li>
+                    <li><a href="#servicos" class="footer__nav-link">Serviços</a></li>
+                    <li><a href="#contato" class="footer__nav-link">Fale Conosco</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer__newsletter">
+                <h3 class="footer__newsletter-title">Novidades e lançamentos</h3>
+                <form class="footer__newsletter-form" id="newsletterForm">
+                    <input type="email" class="footer__newsletter-input" placeholder="Digite seu e-mail..."
+                        id="newsletterEmail" required aria-label="E-mail para newsletter">
+                    <button type="submit" class="footer__newsletter-btn">Enviar</button>
+                </form>
+
+                <h3 class="footer__social-title">Nossas Redes</h3>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link" aria-label="YouTube">
+                        <img src="assets/youtube.png" alt="YouTube">
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="Facebook">
+                        <img src="assets/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="Instagram">
+                        <img src="assets/instagram.png" alt="Instagram">
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                        <img src="assets/linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <a href="#" class="footer__bottom-link">Termos de uso</a>
+            <a href="#" class="footer__bottom-link">Políticas de privacidade</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
