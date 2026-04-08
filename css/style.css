@@ -630,6 +630,15 @@ img {
   background-color: var(--color-white);
 }
 
+.valores__description {
+  max-width: 780px;
+  margin: 0 auto 36px;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+}
+
 .valores__container {
   max-width: 1100px;
   margin: 0 auto;
