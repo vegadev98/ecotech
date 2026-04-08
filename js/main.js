@@ -43,8 +43,19 @@ function initSearchForm() {
 
   if (!form || !input) return;
 
+  const btn = form.querySelector('.header__search-btn');
+  if (!btn) return;
+
+  const originalIcon = btn.innerHTML;
+
+  const iconSpinner = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>`;
+  const iconNotFound = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8.5" y1="8.5" x2="13.5" y2="13.5"/><line x1="13.5" y1="8.5" x2="8.5" y2="13.5"/></svg>`;
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    if (btn.disabled) return;
+
     const query = input.value.trim();
 
     if (query.length < 2) {
@@ -52,8 +63,32 @@ function initSearchForm() {
       return;
     }
 
-    // Placeholder para futura implementação de busca
-    console.log('Busca realizada:', query);
+    // Estado: buscando
+    btn.innerHTML = iconSpinner;
+    btn.classList.add('header__search-btn--searching');
+    btn.disabled = true;
+
+    setTimeout(() => {
+      // Estado: sem resultados
+      btn.classList.remove('header__search-btn--searching');
+      btn.classList.add('header__search-btn--no-results');
+      btn.innerHTML = iconNotFound;
+
+      const rect = form.getBoundingClientRect();
+      const tooltip = document.createElement('span');
+      tooltip.className = 'header__search-no-results';
+      tooltip.textContent = 'Nenhum resultado encontrado';
+      tooltip.style.top = (rect.bottom + 6) + 'px';
+      tooltip.style.left = (rect.left + rect.width / 2) + 'px';
+      document.body.appendChild(tooltip);
+
+      setTimeout(() => {
+        btn.classList.remove('header__search-btn--no-results');
+        btn.innerHTML = originalIcon;
+        btn.disabled = false;
+        tooltip.remove();
+      }, 2500);
+    }, 1500);
   });
 }
 
